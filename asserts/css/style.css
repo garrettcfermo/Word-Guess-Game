@@ -1,0 +1,25 @@
+/* Unverisal Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-image: url("../images/Background-Image.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+
+/* Header Styles */
+.header {
+  text-align: center;
+}
+
+#logo {
+  font-family: "Monoton";
+  font-size: 120px;
+}
+
+#logo-style {
+  font-family: "Pacifico";
+  font-size:50px;
+}
