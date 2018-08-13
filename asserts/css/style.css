@@ -16,10 +16,33 @@ body {
 
 #logo {
   font-family: "Monoton";
-  font-size: 120px;
+  font-size: 100px;
 }
 
 #logo-style {
   font-family: "Pacifico";
   font-size:50px;
+}
+
+@media screen and (max-width: 768px) {
+  #logo {
+    font-size: 80px;
+  }
+
+  #logo-style{
+    font-size:30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #logo {
+    font-size: 50px;
+  }
+}
+
+/* Main Styles */
+.main {
+  border-style: double;
+  border-width: 10px;
+  /* height: 500px; */
 }
