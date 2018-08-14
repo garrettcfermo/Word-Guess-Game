@@ -44,11 +44,13 @@ let bandSong = bandInfo[randNum].song
 let bandImg = bandInfo[randNum].image
 
 // Current Word Spaces
-console.log(bandName.length)
-
+let currentWord=[]
 for(let i =0 ; i <bandName.length; i++){
-   
+   currentWord.push("  _  ")
 }
+
+
+
 
 // Users Guess
 userGuess = event.key.toLowerCase()
@@ -87,7 +89,7 @@ document.querySelector('.game').innerHTML=`
           <h5>Wins</h5>
           <h6>${winScore}</h6>
           <h5>Current Word</h5>
-          <h6>_ _ _ _ _ _ _ _ </h6>
+          <h6>${currentWord.join("")}</h6>
           <h5>Number of Guesses Remaining</h5>
           <h6>${guessRemain}</h6>
           <h5>Letters Already Guessed</h5>
