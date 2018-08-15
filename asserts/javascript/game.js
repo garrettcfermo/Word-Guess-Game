@@ -22,51 +22,34 @@ let bandInfo = [
   },
 ]
 
-// Initial Random Number to pick Band
+// Initial Info
+//Random Number
 let randNum = Math.floor(Math.random() * bandInfo.length)
-
-// Initial Winning Score Board
+//Winning Score Board
 let winScore =0
-
-// Initial Number of Guesses Remaining
+//Number of Guesses Remaining
 let guessRemain =13
-
-// Initial Array of Guesses Made
+//Array of Guesses Made
 let guessesArr =[]
 
 document.onkeyup = function (event) {
 
-// Band Name
+// Selected Band Info
 let bandName = bandInfo[randNum].name
-// Band Song
 let bandSong = bandInfo[randNum].song
-// Band Image
 let bandImg = bandInfo[randNum].image
 
 // Current Word Spaces
 let currentWord=[]
 for(let i =0 ; i <bandName.length; i++){
-   currentWord.push("  _  ")
+   currentWord.push(" _ ")
 }
-
-
-
 
 // Users Guess
 userGuess = event.key.toLowerCase()
 
-
 // Letters Already Guessed
 guessesArr.push(userGuess)
-
-
-
-
-
-
-
-
-
 
 
 
@@ -79,6 +62,7 @@ document.querySelector(".game-image").innerHTML = `<img class="game-image" src="
 
 // Create a piece of html to display the bands song
 document.querySelector('.game-music').innerHTML = `
+      <h5>Hint: Play the Song!</h5> 
       <audio controls>
             <source src="asserts/audios/${bandSong}.m4a" type="audio/mp4">
         </audio>
@@ -89,7 +73,7 @@ document.querySelector('.game').innerHTML=`
           <h5>Wins</h5>
           <h6>${winScore}</h6>
           <h5>Current Word</h5>
-          <h6>${currentWord.join("")}</h6>
+          <h6>${currentWord.join("  ")}</h6>
           <h5>Number of Guesses Remaining</h5>
           <h6>${guessRemain}</h6>
           <h5>Letters Already Guessed</h5>
