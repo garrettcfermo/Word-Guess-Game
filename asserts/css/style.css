@@ -50,6 +50,10 @@ body {
   margin-top: 10px;
 }
 
+h6.hidden_word {
+    letter-spacing: 8px;
+}
+
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
